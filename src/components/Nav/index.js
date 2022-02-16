@@ -5,8 +5,6 @@ function Nav(props) {
     pages = [],
     setCurrentPage,
     currentPage,
-    linkSelected,
-    setLinkSelected
    
   } = props;
 
@@ -22,24 +20,20 @@ function Nav(props) {
           
           {pages.map( (reference) => (
             <li
-              className={`mx-1 ${ currentPage.name === reference.name && !linkSelected && 'navActive'
+              className={`mx-1 ${ currentPage.name === reference.name && 'navActive'
               }`}
-              key={reference.name} href={`#${reference.name}1`}
+              key={reference.name}
                 
               
                 onClick={() => {
                   setCurrentPage(reference);
-                  setLinkSelected(false);
-                  console.log("I've been clicked");
                 }}
               >
               {reference.name}
               
             </li>
           ))}
-             <li className={`mx-1 ${linkSelected && 'navActive'}`}>
-            <span onClick={() => setLinkSelected(true)}>Resume</span>
-          </li>
+       
         </ul>
       </nav>
     </header>

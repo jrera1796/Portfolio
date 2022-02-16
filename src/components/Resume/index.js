@@ -4,8 +4,7 @@ function Resume() {
   return (
     <section className="flex-nowrap space-evenly">
     <div>
-      <object aria-label="Resume" width={'180vh!'} height="400px" data={resFile}></object>
-
+      <embed src={resFile} width="1000px" height="900px" />
     </div>
     </section>
   )

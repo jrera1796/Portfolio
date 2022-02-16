@@ -3,13 +3,13 @@ import yoursTruly from '../../assets/images/91B94B58-A2A4-435E-A08B-3FC1CE1127A2
 
 function About() {
   return (
-    <section id="About1">
+    <section id="about">
       <div className="about-section">
         <div>
           <img src={yoursTruly} className="my-5" style={{ borderRadius: "100%" }} alt="cover" />
         </div>
-        <div style={{ textAlign: "center" }}>
-          <div className="about-margin">
+        <div className="about-margin" style={{ textAlign: "center" }}>
+          <div>
             <div>
               <h2 id="about">Jose Rivera</h2>
               <h6 style={{ marginTop: "-8px" }}>San Francisco, California</h6>
