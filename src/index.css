@@ -184,6 +184,9 @@ textarea {
 .space-between {
   justify-content: space-between;
 }
+.space-evenly {
+  justify-content: space-evenly;
+}
 
 .flex-end {
   justify-content: flex-end;
@@ -297,3 +300,27 @@ a {
 .navActive {
   color: var(--secondary);
 }
+
+ /* Alignments */
+
+ .about-section{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+ }
+
+ .about-margin{
+  
+
+   
+
+}
+
+ @media only screen and (max-width: 600px) {
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ }

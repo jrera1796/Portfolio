@@ -5,11 +5,13 @@ function Nav(props) {
     pages = [],
     setCurrentPage,
     currentPage,
+    linkSelected,
+    setLinkSelected
    
   } = props;
 
   return (
-    <header className="flex-row px-1">
+    <header style={{display: "flex", justifyContent: "space-between"}} className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
           Jose Rivera
@@ -20,14 +22,23 @@ function Nav(props) {
           
           {pages.map( (reference) => (
             <li
-              className={`mx-1`}
-              key={reference.name}>
-                {reference.name}
+              className={`mx-1 ${ currentPage.name === reference.name && !linkSelected && 'navActive'
+              }`}
+              key={reference.name} href={`#${reference.name}1`}
+                
+              
+                onClick={() => {
+                  setCurrentPage(reference);
+                  setLinkSelected(false);
+                  console.log("I've been clicked");
+                }}
+              >
+              {reference.name}
               
             </li>
           ))}
-          <li className="mx-1">
-            Resume
+             <li className={`mx-1 ${linkSelected && 'navActive'}`}>
+            <span onClick={() => setLinkSelected(true)}>Resume</span>
           </li>
         </ul>
       </nav>

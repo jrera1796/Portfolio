@@ -8,10 +8,11 @@ function App() {
   const [pages] = useState([
     {name: "About", description: "A little about myself."},
     {name: "Projects", description: "A summary of the projects I'ved worked on"},
-    {name: "Contact", description: "How to get in touch with me."},
+    {name: "Contact", description: "How to get in touch with me."}
+
 ]);
   const [currentPage, setCurrentPage] = useState(pages[0]);
-  const [contactSelected, setContactSelected] = useState(false);
+  const [linkSelected, setLinkSelected] = useState(false);
 
   
   return (
@@ -20,12 +21,16 @@ function App() {
     pages={pages}
     setCurrentPage={setCurrentPage}
     currentPage={currentPage}
-    contactSelected={contactSelected}
-    setContactSelected={setContactSelected}
+    linkSelected={linkSelected}
+    setLinkSelected={setLinkSelected}
   />
-      <main>
+      <main style={{display: "flex", flexDirection: "column", alignContent: "center"}}>{!linkSelected ?(
+        <>
     <About/>
-    <Resume/>
+    </>):(
+      
+      <Resume/>
+    )}
       </main>
 
     </div>
