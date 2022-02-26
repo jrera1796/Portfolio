@@ -1,7 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import yoursTruly from '../../assets/images/91B94B58-A2A4-435E-A08B-3FC1CE1127A2_4_5005_c.jpeg';
+import Extra from '../Extra'
 
 function About() {
+const buttonHandler = () =>{
+  if(showExtra === true){
+    setShowExtra(false)
+  }else{
+  setShowExtra(true)
+  }
+}
+  const [showExtra, setShowExtra] = useState(false);
+
   return (
     <section id="about">
       <div className="about-section">
@@ -38,11 +48,20 @@ function About() {
 
       <div style={{margin: "5%", textAlign: "center" }}>
 
-        <div>
-          <p>Hello world! I'm a Full Stack Developer currently enrolled in UC Berkeleys coding bootcamp</p>
+        <div className=" py-2 px-2 about-margin">
+          <p>I'm a motivated and career driven indivdual with 4 years of Management experience and 8 years in Customer Service. I'm always up for a new challenge!</p>
         </div>
       </div>
       
+      {showExtra?(
+        <div>
+      <Extra>       
+      </Extra>
+       <button onClick={buttonHandler}>Show Less</button>
+       </div>
+      ):(
+        <button onClick={buttonHandler}>Show More</button>
+      )}
     </section>
   )
 }

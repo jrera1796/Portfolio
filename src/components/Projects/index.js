@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 function Projects() {
   return (
@@ -7,19 +9,45 @@ function Projects() {
         <div className="project-card">
           <div className="project-title">
             <h3>Pregame</h3>
+            <div class="project-tag">#Music #Spotify #Playlists</div>
+            <div className="project-links">
+              <a className="links" href="https://tbellenger.github.io/playlist/"><FontAwesomeIcon icon={faCoffee} />Website</a>
+            </div>
+            <br></br>
           </div>
-          <a href="https://tbellenger.github.io/playlist/">
-            <img alt="Pregame" class="card2" src={require("../../assets/images/Pregame.gif")} />
-            </a>
-          <p>Pregame is a webpage designed for music lovers to have a preview about the bands/artists' performance of the festivals through Spotify tracks. The search engine will automatically generate a spotify playlist with the top track from each of the artists in the lineup based on the corresponding search result.</p>
+          <div>
+            <div className="project-img">
+              <a href="https://tbellenger.github.io/playlist/">
+                <img alt="Pregame" src={require("../../assets/images/Pregame.gif")} />
+              </a>
+            </div>
+            <div className="project-description">
+              <p class="card-description">Pregame is website that creates a playlists from the artists of any given concert or music festival lineup.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="project-card">
-        <div className="project-title">
+          <div className="project-title">
             <h3>Flavor Express</h3>
+            <div class="project-tag">#Food #Recipes</div>
+            <div className="project-links">
+              <a className="lins" href="/"><span>Icon </span>Website</a>
+            </div>
+            <br></br>
           </div>
-          <a href="_blank"><img alt="FlavorExpress" src={require("../../assets/images/flavor-express.png")}/></a>
-          <p>FlavorExpress is an application that allows user to look up recipes. User are able to create an account to join the community.Once joined, user can leave comments, upload recipes, rate other recipes and delete recipes/ratings. Flavor Express is a good place to share your recipes and thoughts and ideas of cooking. The application also provides Express Hints for busy users to get a quick and easy recipe that could be done shortly. It is worth trying out.</p>
+          <div>
+            <div className="project-img">
+              <a href="https://flavor-express.herokuapp.com" target="_blank" rel="noreferrer" noopner>
+                <img alt="FlavorExpress" src={require("../../assets/images/flavor-express.png")} />
+              </a>
+            </div>
+            <div className="project-description">
+              <p class="card-description">FlavorExpress is a networking-like site where users can view and create recipes.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

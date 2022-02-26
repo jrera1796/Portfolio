@@ -4,6 +4,7 @@ import About from './components/About';
 import Resume from './components/Resume';
 import Contact from './components/Contacts';
 import Projects from './components/Projects';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import './App.css'
 
 function App() {
@@ -43,6 +44,17 @@ function App() {
       <main style={{ display: "flex", flexDirection: "column", alignContent: "center" }}>
         {renderPage()}
       </main>
+      <footer className='footer'><div className='col'>
+        <div>Jose Rivera 2022</div>
+        <div>
+          <a className='text-white' href='github.com/jrera1796'>Git Hub <FaGithub /></a>
+          <div>
+          <a className='text-white' href='https://www.linkedin.com/IN/JOSENAIROBYRIVERA/'>Linked In<FaLinkedin></FaLinkedin></a>
+        </div>
+        </div>
+      </div>
+      </footer>
+
     </div>
   );
 }

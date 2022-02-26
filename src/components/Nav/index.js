@@ -9,14 +9,20 @@ function Nav(props) {
   } = props;
 
   return (
-    <header style={{display: "flex", justifyContent: "space-between"}} className="flex-row px-1">
+    <header className="flex-row px-1">
+      <div className='header-title'>
       <h2>
         <a data-testid="link" href="/">
           Jose Rivera
         </a>
       </h2>
-      <nav>
-        <ul className="flex-row">
+      </div>
+      <nav><div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+    <span></span>
+    <span></span>
+        <ul className="flex-row nav-links" id="menu">
           
           {pages.map( (reference) => (
             <li
@@ -35,6 +41,7 @@ function Nav(props) {
           ))}
        
         </ul>
+        </div>
       </nav>
     </header>
   );
