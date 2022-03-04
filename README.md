@@ -9,8 +9,9 @@ https://jrera1796.github.io/Portfolio/
 
 ## Built With
 * JavaScript
+* CSS
 * React
-* NodeJS, Express;
+* NodeJS
 
 ## Screenshot
 [![Portfolio](portfolio.png)](https://jrera1796.github.io/Portfolio/)
