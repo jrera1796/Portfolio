@@ -3,7 +3,7 @@
 # Jose Rivera's Portfolio
 
 ## Description
-A simple and responsive portfolio made with Node and React. Check out the projects I've Worked on!
+A simple and responsive portfolio made with Node and React. Check out the projects I've worked on!
 
 https://jrera1796.github.io/Portfolio/
 
