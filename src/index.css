@@ -383,7 +383,7 @@ border-radius: 5%;
   border: 5px solid var(--secondary);
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: space-between;
   border: 5px solid var(--secondary);
   background-color: rgb(0, 0, 0, 0.50);
   margin: 5%;
