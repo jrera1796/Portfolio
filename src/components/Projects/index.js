@@ -25,7 +25,6 @@ function Projects() {
             </div>
           </div>
         </div>
-
         <div className="project-card">
           <div className="project-title">
             <h3>Flavor Express</h3>
