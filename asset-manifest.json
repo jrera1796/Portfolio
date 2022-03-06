@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.cca8a0e3.css",
-    "main.js": "/Portfolio/static/js/main.549c8439.js",
+    "main.css": "/Portfolio/static/css/main.41d83b9c.css",
+    "main.js": "/Portfolio/static/js/main.16556ae4.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Pregame.gif": "/Portfolio/static/media/Pregame.de1d00e63e227169fef8.gif",
+    "static/media/gift.png": "/Portfolio/static/media/gift.16eca0cdf1b43aaa5b5b.png",
     "static/media/pexels-pixabay-414645.jpg": "/Portfolio/static/media/pexels-pixabay-414645.cc13c716aa83ef97348a.jpg",
     "static/media/flavor-express.png": "/Portfolio/static/media/flavor-express.56f087f8c25a75a4eaf2.png",
     "static/media/JoseResume.pdf": "/Portfolio/static/media/JoseResume.876ac384de83ab8a5ccb.pdf",
     "static/media/91B94B58-A2A4-435E-A08B-3FC1CE1127A2_4_5005_c.jpeg": "/Portfolio/static/media/91B94B58-A2A4-435E-A08B-3FC1CE1127A2_4_5005_c.8f3283febf432c2192fb.jpeg",
     "index.html": "/Portfolio/index.html",
-    "main.cca8a0e3.css.map": "/Portfolio/static/css/main.cca8a0e3.css.map",
-    "main.549c8439.js.map": "/Portfolio/static/js/main.549c8439.js.map",
+    "main.41d83b9c.css.map": "/Portfolio/static/css/main.41d83b9c.css.map",
+    "main.16556ae4.js.map": "/Portfolio/static/js/main.16556ae4.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cca8a0e3.css",
-    "static/js/main.549c8439.js"
+    "static/css/main.41d83b9c.css",
+    "static/js/main.16556ae4.js"
   ]
 }
