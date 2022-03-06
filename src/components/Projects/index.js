@@ -63,7 +63,7 @@ function Projects() {
               </a>
             </div>
             <div className="project-description">
-              <p className="card-description">Gift 
+              <p className="card-description">We know how difficult it can be to come up with the perfect gift for your friends or family. That's why our team decided to create 'GIFT'.
               </p>
             </div>
           </div>

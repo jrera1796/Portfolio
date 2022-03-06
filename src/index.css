@@ -128,10 +128,6 @@ img {
   max-width: 100%;
 }
 
-span[role="img"] {
-  cursor: default;
-}
-
 form {
   width: 40%;
 }
