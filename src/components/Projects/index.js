@@ -59,7 +59,7 @@ function Projects() {
           <div>
             <div className="project-img">
               <a href="https://gift-p3.herokuapp.com/">
-                <img alt="Gift" src={require("../../assets/images/gift.gif")} />
+                <img alt="Gift" src={require("../../assets/images/gift.png")} />
               </a>
             </div>
             <div className="project-description">
