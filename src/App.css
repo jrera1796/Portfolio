@@ -2,12 +2,21 @@
   text-align: center;
 }
 
-body{
-  background-image: url('../src/assets/images/pexels-pixabay-414645.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+.header-container {
+  width: 100vw;
+  position: relative;
+}
+.main-content {
+  height: fit-content;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -20,7 +29,6 @@ body{
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
