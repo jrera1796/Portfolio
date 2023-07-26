@@ -50,7 +50,7 @@ function App() {
 
       <footer className='footer'>
   <div className='col'>
-    <div>Qapital Impressions 2023&copy;</div>
+    <div>&copy;2023 Qapital Impressions</div>
     <div>
       <a className='text-white' href='github.com/jrera1796'>GitHub <FaGithub /></a>
     </div>
