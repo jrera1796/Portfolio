@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Nav from "./components/Nav";
 import Home from './components/Home';
+import Contact from './components/Contacts'
 import { FaGithub } from 'react-icons/fa';
 import './App.css'
 
 function App() {
   const [pages] = useState([
-    { name: "Home", description: "Home Page." }
+    { name: "Home", description: "Home Page." },
+    { name: "Contact", description: "Contacts Page"}
 
   ]);
 
@@ -22,9 +24,9 @@ function App() {
     if (currentPage.name === "Home") {
       return <Home currentPage={currentPage} />
     }
-    // if (currentPage.name === "Projects") {
-    //   return <Projects currentPage={currentPage} />
-    // }
+    if (currentPage.name === "Contact") {
+      return <Contact currentPage={currentPage} />
+    }
   }
 
   return (
@@ -52,11 +54,11 @@ function App() {
   <div className='col'>
     <div>&copy;2023 Qapital Impressions</div>
     <div>
-      <a className='text-white' href='github.com/jrera1796'>GitHub <FaGithub /></a>
+      <a className='text-white' href='https://www.github.com/jrera1796'>GitHub <FaGithub /></a>
     </div>
     <div className="contact-info">
       <h4>Contact Information</h4>
-      <p>Email: info@qapitalimpressions.com</p>
+      <p>Email: info@qapital-impressions.com</p>
     </div>
   </div>
   <div className="footer-message">

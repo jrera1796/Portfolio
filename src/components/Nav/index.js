@@ -18,7 +18,7 @@ function Nav(props) {
         className={`menu-toggle ${menuOpen ? 'open' : ''}`}
         onClick={toggleMenu}
         onBlur={handleOutsideClick} // Hide the menu when it loses focus
-        onMouseLeave={handleOutsideClick} // Hide the menu when the cursor leaves the menu area
+        // onMouseLeave={handleOutsideClick} // Hide the menu when the cursor leaves the menu area
       >
         <span></span>
         <span></span>
