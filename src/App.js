@@ -1,60 +1,70 @@
 import React, { useState } from 'react';
 import Nav from "./components/Nav";
-import About from './components/About';
-import Resume from './components/Resume';
-import Contact from './components/Contacts';
-import Projects from './components/Projects';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Home from './components/Home';
+import Contact from './components/Contacts'
+import { FaGithub } from 'react-icons/fa';
 import './App.css'
 
 function App() {
   const [pages] = useState([
-    { name: "About", description: "A little about myself." },
-    { name: "Projects", description: "A summary of the projects I'ved worked on" },
-    { name: "Contact", description: "How to get in touch with me." },
-    { name: "Resume", description: "My Resume" }
+    { name: "Home", description: "Home Page." },
+    { name: "Contact", description: "Contacts Page"}
 
   ]);
 
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   const renderPage = () => {
-    if (currentPage.name === "About") {
-      return <About currentPage={currentPage} />
-    }
-    if (currentPage.name === "Projects") {
-      return <Projects currentPage={currentPage} />
+    if (currentPage.name === "Home") {
+      return <Home currentPage={currentPage} />
     }
     if (currentPage.name === "Contact") {
       return <Contact currentPage={currentPage} />
     }
-    if (currentPage.name === "Resume") {
-      return <Resume currentPage={currentPage} />
-    }
   }
 
   return (
-    <div>
-      <Nav
-        pages={pages}
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-      ></Nav>
-      <main style={{ display: "flex", flexDirection: "column", alignContent: "center" }}>
+    <div className="app-container" onMouseLeave={() => setMenuOpen(false)}>
+      {/* Separate container for header image and navigation */}
+      <header className="header-container">
+        <div className="header-bg"></div>
+        <div className="nav-container">
+          <Nav
+            pages={pages}
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+            menuOpen={menuOpen}
+            toggleMenu={toggleMenu}
+          />
+        </div>
+      </header>
+
+      {/* Main content container */}
+      <main className="main-content">
         {renderPage()}
       </main>
-      <footer className='footer'><div className='col'>
-        <div>Jose Rivera 2022</div>
-        <div>
-          <a className='text-white' href='github.com/jrera1796'>Git Hub <FaGithub /></a>
-          <div>
-          <a className='text-white' href='https://www.linkedin.com/IN/JOSENAIROBYRIVERA/'>Linked In<FaLinkedin></FaLinkedin></a>
-        </div>
-        </div>
-      </div>
-      </footer>
 
+      <footer className='footer'>
+  <div className='col'>
+    <div>&copy;2023 Qapital Impressions</div>
+    <div>
+      <a className='text-white' href='https://www.github.com/jrera1796'>GitHub <FaGithub /></a>
+    </div>
+    <div className="contact-info">
+      <h4>Contact Information</h4>
+      <p>Email: info@qapital-impressions.com</p>
+    </div>
+  </div>
+  <div className="footer-message">
+    <p>This website is a work in progress. Check back for updates and exciting new features!</p>
+  </div>
+</footer>
     </div>
   );
 }
