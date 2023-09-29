@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from "./components/Nav";
 import Home from './components/Home';
 import Contact from './components/Contacts'
@@ -7,8 +8,8 @@ import './App.css'
 
 function App() {
   const [pages] = useState([
-    { name: "Home", description: "Home Page." },
-    { name: "Contact", description: "Contacts Page"}
+    { name: "Home", description: "Home Page.", path: "/" },
+    { name: "Contact", description: "Contacts Page", path: "/contact" }
 
   ]);
 
@@ -30,6 +31,7 @@ function App() {
   }
 
   return (
+    <Router>
     <div className="app-container" onMouseLeave={() => setMenuOpen(false)}>
       {/* Separate container for header image and navigation */}
       <header className="header-container">
@@ -46,9 +48,13 @@ function App() {
       </header>
 
       {/* Main content container */}
-      <main className="main-content">
-        {renderPage()}
-      </main>
+      <Routes>
+            <Route path="/" element={<Home />} >
+            </Route>
+            <Route path="/contact" element={<Contact/>}>
+            </Route>
+            {/* Add more routes for additional pages if needed */}
+          </Routes>
 
       <footer className='footer'>
   <div className='col'>
@@ -66,6 +72,7 @@ function App() {
   </div>
 </footer>
     </div>
+    </Router>
   );
 }
 

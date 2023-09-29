@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-
+import { Link } from 'react-router-dom'
 function Nav(props) {
   const { pages = [], setCurrentPage, currentPage, menuOpen, toggleMenu } = props;
   const menuRef = useRef(null);
@@ -18,7 +18,7 @@ function Nav(props) {
         className={`menu-toggle ${menuOpen ? 'open' : ''}`}
         onClick={toggleMenu}
         onBlur={handleOutsideClick} // Hide the menu when it loses focus
-        // onMouseLeave={handleOutsideClick} // Hide the menu when the cursor leaves the menu area
+      // onMouseLeave={handleOutsideClick} // Hide the menu when the cursor leaves the menu area
       >
         <span></span>
         <span></span>
@@ -36,11 +36,11 @@ function Nav(props) {
                 toggleMenu(); // Close the menu after selecting a page
               }}
             >
-              {reference.name}
+              <Link to={reference.path}>{reference.name}</Link>
             </li>
           ))}
         </ul>
-        </div>
+      </div>
     </nav>
 
   );
